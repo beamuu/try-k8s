@@ -1,0 +1,11 @@
+version: '3'
+services:
+  myapp:
+    image: myapp-on-k8s:latest
+    ports:
+      - "8080:8080"
+  redis:
+    image: redis:latest
+    command: redis-server --requirepass helloworld
+    ports:
+      - "6379:6379"
